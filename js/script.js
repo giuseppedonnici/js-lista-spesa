@@ -30,15 +30,16 @@ const addBtn = document.getElementById("submit");
 console.log(addBtn);
 
 addBtn.addEventListener("click", function() {
-    if (addInput.value !== "") {
+    if (addInput.value !== "" && !shoppingList.includes(addInput.value)) {
         const addAlim = addInput.value;
         console.log(addAlim);
         shoppingList.push(addAlim);
         console.log(shoppingList);
         myList.innerHTML = toBuy += `<li>${i += 1} - ${addAlim}</li>`;
-
+        addInput.value = "";
     }
 })
+
 
 
 
