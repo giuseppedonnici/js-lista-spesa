@@ -15,12 +15,33 @@ console.log(myList);
 
 let i = 0;
 while (i < shoppingList.length) {
-    toBuy += `<li>${shoppingList[i]}</li>`;
+    toBuy += `<li>${i + 1} - ${shoppingList[i]}</li>`;
     console.log(toBuy);
     i++;
 }
 
-myList.innerHTML = toBuy;
+myList.innerHTML = toBuy
+
+
+const addInput = document.getElementById("add-alim");
+console.log(addInput);
+
+const addBtn = document.getElementById("submit");
+console.log(addBtn);
+
+addBtn.addEventListener("click", function() {
+    if (addInput.value !== "") {
+        const addAlim = addInput.value;
+        console.log(addAlim);
+        shoppingList.push(addAlim);
+        console.log(shoppingList);
+        myList.innerHTML = toBuy += `<li>${i += 1} - ${addAlim}</li>`;
+
+    }
+})
+
+
+
 
 
 
